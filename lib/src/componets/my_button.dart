@@ -36,7 +36,8 @@ class MyButton extends StatelessWidget {
            color: ColorStyle.primary,
           ),
           shape: RoundedRectangleBorder(
-        BorderRadius : BorderRadius.circular(10)
+            borderRadius: BorderRadius.circular(10),
+
           )
         ),
         child: Text(
@@ -46,7 +47,7 @@ class MyButton extends StatelessWidget {
           )
         ), 
       ),
-    ),
+    );
   }
 
 
