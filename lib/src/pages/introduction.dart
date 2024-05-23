@@ -1,5 +1,6 @@
-import 'package:app_gooday/src/components/color_style.dart';
-import 'package:app_gooday/src/components/intro_page.dart';
+
+import 'package:app_gooday/src/componets/color_style.dart';
+import 'package:app_gooday/src/componets/intro_page.dart';
 import 'package:flutter/material.dart';
 
 class Introduction extends StatefulWidget {
@@ -22,7 +23,7 @@ class _IntroductionState extends State<Introduction>
 
     _tabPageSelector = TabPageSelector(
       controller: TabController(length: 4, vsync: this),
-      color: ColorStyle.secundary,
+      color: ColorStyle.backgroud,
       selectedColor: ColorStyle.primary,
       borderStyle: BorderStyle.none,
     );
@@ -52,7 +53,7 @@ class _IntroductionState extends State<Introduction>
               );
             }
           },
-          color: ColorStyle.white,
+          color: ColorStyle.backgroud,
           icon: const Icon(Icons.arrow_back_ios_new_rounded),
         ),
       ),

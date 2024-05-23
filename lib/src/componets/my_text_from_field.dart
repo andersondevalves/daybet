@@ -1,4 +1,5 @@
-import 'package:app_gooday/src/components/color_style.dart';
+
+import 'package:app_gooday/src/componets/color_style.dart';
 import 'package:flutter/material.dart';
 
 class MyTextFormField extends StatefulWidget {
@@ -46,7 +47,7 @@ class _MyTextFormFieldState extends State<MyTextFormField> {
         hintText: widget._hintText,
         hintStyle: const TextStyle(
           fontSize: 12,
-          color: ColorStyle.textNeutrals,
+          color: ColorStyle.backgroud,
         ),
         suffixIcon: widget._isPassword
             ? IconButton(

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'color_style.dart';
 
 class IntroPage extends StatelessWidget {
@@ -37,7 +36,7 @@ class IntroPage extends StatelessWidget {
             height: MediaQuery.of(context).size.height / 2,
             width: MediaQuery.of(context).size.width,
             decoration: const BoxDecoration(
-              color: ColorStyle.backgroundPage,
+              color: ColorStyle.backgroud,
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(30),
                 topRight: Radius.circular(30),
@@ -62,7 +61,7 @@ class IntroPage extends StatelessWidget {
                   child: Text(
                     _description,
                     style: const TextStyle(
-                      color: ColorStyle.textNeutrals,
+                      color: ColorStyle.backgroud,
                       fontSize: 16,
                     ),
                   ),

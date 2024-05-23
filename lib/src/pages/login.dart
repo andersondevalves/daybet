@@ -1,6 +1,7 @@
-import 'package:app_gooday/src/components/color_style.dart';
-import 'package:app_gooday/src/components/my_button.dart';
-import 'package:app_gooday/src/components/my_text_from_field.dart';
+
+import 'package:app_gooday/src/componets/color_style.dart';
+import 'package:app_gooday/src/componets/my_button.dart';
+import 'package:app_gooday/src/componets/my_text_from_field.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatefulWidget {
@@ -16,9 +17,9 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ColorStyle.backgroundPage,
+      backgroundColor: ColorStyle.backgroud,
       appBar: AppBar(
-        backgroundColor: ColorStyle.backgroundPage,
+        backgroundColor: ColorStyle.backgroud,
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
@@ -35,7 +36,7 @@ class _LoginState extends State<Login> {
             const Text(
               'Acesse',
               style: TextStyle(
-                color: ColorStyle.textNeutrals,
+                color: ColorStyle.backgroud,
                 fontSize: 35,
                 fontWeight: FontWeight.bold,
               ),
@@ -43,7 +44,7 @@ class _LoginState extends State<Login> {
             const Text(
               'com E-mail e Senha',
               style: TextStyle(
-                color: ColorStyle.textNeutrals,
+                color: ColorStyle.backgroud,
                 fontSize: 12,
                 fontWeight: FontWeight.bold,
               ),
@@ -53,7 +54,7 @@ class _LoginState extends State<Login> {
               child: Text(
                 'E-mail',
                 style: TextStyle(
-                  color: ColorStyle.textNeutrals,
+                  color: ColorStyle.backgroud,
                   fontSize: 10,
                 ),
               ),
@@ -61,7 +62,7 @@ class _LoginState extends State<Login> {
             MyTextFormField(
               controller:
                   TextEditingController.fromValue(TextEditingValue.empty),
-              fillColor: ColorStyle.backgroundField,
+              fillColor: ColorStyle.backgroud,
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide.none,
@@ -74,7 +75,7 @@ class _LoginState extends State<Login> {
               child: Text(
                 'Senha',
                 style: TextStyle(
-                  color: ColorStyle.textNeutrals,
+                  color: ColorStyle.backgroud,
                   fontSize: 10,
                 ),
               ),
@@ -82,7 +83,7 @@ class _LoginState extends State<Login> {
             MyTextFormField(
               controller:
                   TextEditingController.fromValue(TextEditingValue.empty),
-              fillColor: ColorStyle.backgroundField,
+              fillColor: ColorStyle.backgroud,
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide.none,
@@ -109,7 +110,7 @@ class _LoginState extends State<Login> {
                       const Text(
                         'Lembrar senha',
                         style: TextStyle(
-                          color: ColorStyle.textNeutrals,
+                          color: ColorStyle.backgroud,
                           fontSize: 12,
                         ),
                       ),
@@ -119,7 +120,7 @@ class _LoginState extends State<Login> {
                   const Text(
                     'Esqueci minha senha',
                     style: TextStyle(
-                      color: ColorStyle.textNeutrals,
+                      color: ColorStyle.backgroud,
                       fontSize: 12,
                     ),
                   ),
@@ -130,7 +131,7 @@ class _LoginState extends State<Login> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 MyButton(
-                  buttonProportion: 0.4,
+                  buttonPropotion: 0.4,
                   marginSize: 0,
                   label: 'Acessar',
                   isPrimary: true,
@@ -139,7 +140,7 @@ class _LoginState extends State<Login> {
                   },
                 ),
                 MyButton(
-                  buttonProportion: 0.4,
+                  buttonPropotion: 0.4,
                   marginSize: 0,
                   label: 'Cadastrar',
                   isPrimary: false,
@@ -155,7 +156,7 @@ class _LoginState extends State<Login> {
                   Text(
                     ' Ou continue com ',
                     style: TextStyle(
-                      color: ColorStyle.textNeutrals,
+                      color: ColorStyle.backgroud,
                       fontSize: 12,
                       fontWeight: FontWeight.bold,
                     ),

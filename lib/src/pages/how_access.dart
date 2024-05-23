@@ -49,7 +49,9 @@ class _HowAccessState extends State<HowAccess> {
               width: MediaQuery.of(context).size.width - 24,
               height: 62,
               child: OutlinedButton.icon(
-                onPressed: () => {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/login');
+                },
                 icon: Image.network(
                   'https://cdn-icons-png.flaticon.com/256/2875/2875404.png',
                   width: 32,
@@ -57,7 +59,7 @@ class _HowAccessState extends State<HowAccess> {
                 ),
                 label: const Text(
                   'Como deseja acessar',
-                  style: TextStyle(color: Colors.black),
+                  style: TextStyle(color: Colors.white),
                 ),
                 style: OutlinedButton.styleFrom(
                   backgroundColor: const Color.fromRGBO(20, 200, 113, 1.0),
@@ -92,3 +94,4 @@ class _HowAccessState extends State<HowAccess> {
     );
   }
 }
+            
