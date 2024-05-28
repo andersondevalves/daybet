@@ -1,4 +1,3 @@
-
 import 'package:app_gooday/src/componets/color_style.dart';
 import 'package:app_gooday/src/componets/my_button.dart';
 import 'package:app_gooday/src/componets/my_text_from_field.dart';
@@ -17,16 +16,16 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ColorStyle.backgroud,
+      backgroundColor: Color.fromARGB(181, 251, 74, 9),
       appBar: AppBar(
-        backgroundColor: ColorStyle.backgroud,
         leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios_new_rounded),
+          color: Color.fromARGB(255, 14, 15, 14),
           onPressed: () {
             Navigator.pop(context);
           },
-          color: ColorStyle.primary,
-          icon: const Icon(Icons.arrow_back_ios_new_rounded),
         ),
+        backgroundColor: ColorStyle.backgroud,
       ),
       body: Padding(
         padding: const EdgeInsets.all(24),
@@ -36,94 +35,91 @@ class _LoginState extends State<Login> {
             const Text(
               'Acesse',
               style: TextStyle(
-                color: ColorStyle.backgroud,
+                color: ColorStyle.Text,
                 fontSize: 35,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            const Text(
-              'com E-mail e Senha',
-              style: TextStyle(
-                color: ColorStyle.backgroud,
-                fontSize: 12,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
             const Padding(
-              padding: EdgeInsets.only(top: 16),
+              padding: EdgeInsets.only(bottom: 18),
               child: Text(
-                'E-mail',
+                'com E-mail e Senha',
                 style: TextStyle(
-                  color: ColorStyle.backgroud,
-                  fontSize: 10,
+                  color: ColorStyle.Text,
+                  fontSize: 12,
                 ),
               ),
             ),
+            const Text(
+              'E-mail',
+              style: TextStyle(
+                color: ColorStyle.Text,
+                fontSize: 10,
+              ),
+            ),
             MyTextFormField(
-              controller:
-                  TextEditingController.fromValue(TextEditingValue.empty),
-              fillColor: ColorStyle.backgroud,
+              controller: TextEditingController.fromValue(TextEditingValue.empty), 
+              fillColor: ColorStyle.field, 
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
-                borderSide: BorderSide.none,
-              ),
-              hintText: 'Digite seu e-mail',
-              isPassword: false,
+                borderSide: BorderSide.none
+              ), 
+              hintText: 'Digite seu E-mail', 
+              isPassword: false
             ),
             const Padding(
-              padding: EdgeInsets.only(top: 12),
+              padding: EdgeInsets.only(top: 8),
               child: Text(
                 'Senha',
                 style: TextStyle(
-                  color: ColorStyle.backgroud,
+                  color: ColorStyle.Text,
                   fontSize: 10,
                 ),
               ),
             ),
             MyTextFormField(
-              controller:
-                  TextEditingController.fromValue(TextEditingValue.empty),
-              fillColor: ColorStyle.backgroud,
+              controller: TextEditingController.fromValue(TextEditingValue.empty), 
+              fillColor: ColorStyle.field, 
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
-                borderSide: BorderSide.none,
-              ),
-              hintText: 'Digite sua senha',
-              isPassword: true,
+                borderSide: BorderSide.none
+              ), 
+              hintText: 'Digite sua Senha', 
+              isPassword: true
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 16, bottom: 16),
+              padding: const EdgeInsets.only(top: 24, bottom: 24),
               child: Row(
                 children: [
                   Row(
                     children: [
                       Checkbox(
+                        value: _checkBoxValue,
                         onChanged: (value) {
                           setState(() {
                             _checkBoxValue = value!;
                           });
                         },
-                        value: _checkBoxValue,
-                        side: const BorderSide(color: ColorStyle.primary),
-                        activeColor: ColorStyle.primary,
+                        activeColor: Color.fromARGB(255, 20, 21, 21),
+                        side: const BorderSide(color: Color.fromARGB(255, 20, 21, 21)),
                       ),
                       const Text(
                         'Lembrar senha',
                         style: TextStyle(
-                          color: ColorStyle.backgroud,
-                          fontSize: 12,
+                          color: ColorStyle.Text,
+                          fontSize: 12
                         ),
-                      ),
+                      )
                     ],
                   ),
                   const Spacer(),
                   const Text(
                     'Esqueci minha senha',
                     style: TextStyle(
-                      color: ColorStyle.backgroud,
-                      fontSize: 12,
+                      color: ColorStyle.Text,
+                      fontSize: 12
                     ),
-                  ),
+                  )
                 ],
               ),
             ),
@@ -135,30 +131,27 @@ class _LoginState extends State<Login> {
                   marginSize: 0,
                   label: 'Acessar',
                   isPrimary: true,
-                  onPressedButton: () {
-                    Navigator.pushNamed(context, '/introduction');
-                  },
+                  onPressedButton: () {}
                 ),
                 MyButton(
                   buttonPropotion: 0.4,
                   marginSize: 0,
                   label: 'Cadastrar',
                   isPrimary: false,
-                  onPressedButton: () {},
+                  onPressedButton: () {}
                 ),
               ],
             ),
             const Padding(
-              padding: EdgeInsets.only(top: 56, left: 24, right: 24),
+              padding: EdgeInsets.only(top: 50, left: 20, right: 20),
               child: Row(
                 children: [
                   Expanded(child: Divider()),
                   Text(
-                    ' Ou continue com ',
+                    '  Ou continue com  ',
                     style: TextStyle(
-                      color: ColorStyle.backgroud,
-                      fontSize: 12,
-                      fontWeight: FontWeight.bold,
+                      color: ColorStyle.Text,
+                      fontSize: 14
                     ),
                   ),
                   Expanded(child: Divider()),
@@ -166,26 +159,26 @@ class _LoginState extends State<Login> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 24, left: 60, right: 60),
+              padding: const EdgeInsets.only(top: 30, left: 60, right: 60),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Image.network(
-                    'https://cdn-icons-png.flaticon.com/256/2875/2875404.png',
-                    width: 56,
-                    height: 56,
+                    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/2048px-Google_%22G%22_logo.svg.png',
+                    width: 50,
+                    height: 50,
                   ),
                   Image.network(
-                    'https://cdn.iconscout.com/icon/free/png-256/free-facebook-2038471-1718509.png',
-                    width: 56,
-                    height: 56,
-                  )
+                    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/2023_Facebook_icon.svg/1024px-2023_Facebook_icon.svg.png',
+                    width: 50,
+                    height: 50,
+                  ),
                 ],
               ),
             )
           ],
         ),
-      ),
+      )
     );
   }
 }
